@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Lateral</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background-color: rgb(255, 255, 255);
+        }
+        .conteiner-menu{
+            width:100px;
+            background-color: rebeccapurple;
+        }
+        label img{
+            width:25px;
+            margin:10px 15px;
+        }
+        label{
+            padding:5px 2px;
+            position: absolute;
+            cursor:pointer;
+            z-index:1;
+        }
+        input[type=checkbox]{
+            display: none;
+        }
+        nav{
+            width:200px;
+            height:250px;
+            background-color: rgb(241, 183, 75);
+            border:1px solid rgb(221, 146, 6);
+            position:absolute;
+            left:-250px;
+            
+        }
+        input[type=checkbox]:checked ~ nav{
+            transform: translate(250px);
+        }
+        a{
+            display:block;
+            width:189px;
+            text-decoration: none;
+            padding:10px 5px;
+            color:black;
+            transition-duration:1s;
+        }
+        a:hover{
+            background-color: orange;
+            color:white;
+        }
+        ul{
+            position: absolute;
+            top:50px;
+            width: 100%;
+            list-style:none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class='conteiner-menu'>
+        <input type='checkbox' id='check'>
+        <label for='check'><img src="bars-solid.svg"></label>
+        <nav>
+            <ul>
+                <li><a href=''>Home</a></li>
+                <li><a href=''>Sobre</a></li>
+                <li><a href=''>Contato</a></li>
+                <li><a href=''>Suporte</a></li>
+            </ul>
+        </nav>  
+    </div><!--conteiner-menu-->
+</body>
+</html>
